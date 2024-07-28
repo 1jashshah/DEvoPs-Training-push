@@ -34,8 +34,7 @@ as a container.
 **\
 docker pull nginx
 
-![](photos/media/image1.png){width="6.6930555555555555in"
-height="2.1069444444444443in"}
+![](photos/media/image1.png)
 
 -   \--name my-nginx: Assigns a name to the container.
 
@@ -47,8 +46,7 @@ height="2.1069444444444443in"}
 **\
 docker ps
 
-![](photos/media/image2.png){width="6.6930555555555555in"
-height="2.0034722222222223in"} \\
+![](photos/media/image2.png)
 
 -   Visit http://localhost:8080 in your browser. You should see the
     > Nginx welcome page.
@@ -60,15 +58,10 @@ page and create a new image from this modified container.
 
 **Steps:**
 
-![](photos/media/image3.png){width="6.6930555555555555in"
-height="3.678472222222222in"}
+![](photos/media/image3.png)
+![](photos/media/image4.png)
 
-![](photos/media/image4.png){width="6.6930555555555555in"
-height="3.678472222222222in"}
-
-![](photos/media/image4.png){width="6.6930555555555555in"
-height="3.678472222222222in"}
-
+![](photos/media/image4.png)
 ### **Part 3: Creating a Dockerfile to Build and Deploy a Web Application**
 
 **Objective:** Write a Dockerfile to create an image for a simple web
@@ -140,11 +133,9 @@ docker run \--name my-webapp-container -d -p 8082:80 my-webapp-image
     -   Visit http://localhost:8082 in your browser. You should see your
         > custom web application.
 
-![](photos/media/image5.png){width="6.6930555555555555in"
-height="3.678472222222222in"}
+![](photos/media/image5.png)
 
-![](photos/media/image6.png){width="6.6930555555555555in"
-height="3.678472222222222in"}
+![](photos/media/image6.png)
 
 ### Part 4: Cleaning Up
 
@@ -163,8 +154,7 @@ docker rm my-nginx my-custom-nginx my-webapp-container
 **\
 docker rmi nginx custom-nginx my-webapp-imag
 
-![](photos/media/image7.png){width="6.6930555555555555in"
-height="2.1173611111111112in"}
+![](photos/media/image7.png)
 
 Docker Project 02
 
@@ -243,8 +233,7 @@ cd ..
 docker run \--name postgres-container \--network fullstack-network -v
 pgdata:/var/lib/postgresql/data -d my-postgres-db
 
-![](photos/media/image8.png){width="6.6930555555555555in"
-height="3.7625in"}
+![](photos/media/image8.png)
 
 ### **Part 3: Setting Up the Backend (Node.js with Express)**
 

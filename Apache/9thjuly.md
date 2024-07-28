@@ -16,9 +16,7 @@ IP Address: 192.168.1.100
 
 OS: Ubuntu 20.04
 
-![](photos/media/image1.png){width="6.6930555555555555in"
-height="4.107638888888889in"}
-
+![](photos/media/image1.png)
 #### **Part 2: User & Group Management (20 minutes)**
 
 **Scenario:** You need to set up user accounts and groups for a new team
@@ -34,8 +32,7 @@ sudo adduser developer
 \
 sudo deluser developer
 
-![](photos/media/image2.png){width="6.6930555555555555in"
-height="3.7625in"}
+![](photos/media/image2.png)
 
 **2 Managing Groups**
 
@@ -53,14 +50,10 @@ sudo gpasswd -d developer devteam
 
 -   
 
-![](photos/media/image3.png){width="6.6930555555555555in"
-height="3.7625in"}
+![](photos/media/image3.png)
+![](photos/media/image4.png)
 
-![](photos/media/image4.png){width="6.6930555555555555in"
-height="1.7194444444444446in"}
-
-![](photos/media/image5.png){width="6.6930555555555555in"
-height="1.7194444444444446in"}
+![](photos/media/image5.png)
 
 #### **Part 3: File Permissions Management (20 minutes)**
 
@@ -86,8 +79,7 @@ Verify the change:\
 \
 ls -l server_config.txt
 
-> ![](photos/media/image6.png){width="6.1930555555555555in"
-> height="1.5909722222222222in"}
+> ![](photos/media/image6.png)
 
 Change the owner to developer and the group to devteam:\
 \
@@ -99,8 +91,7 @@ Verify the change:\
 \
 ls -l server_config.txt
 
-![](photos/media/image7.png){width="6.6930555555555555in"
-height="0.5916666666666667in"}
+![](photos/media/image7.png)
 
 #### **Part 4: Controlling Services and Daemons (20 minutes)**
 
@@ -125,8 +116,7 @@ Enable the Apache service to start on boot:\
 \
 sudo systemctl enable apache2
 
-![](photos/media/image8.png){width="6.6930555555555555in"
-height="0.5916666666666667in"}
+![](photos/media/image8.png)
 
 -   
 
@@ -140,8 +130,7 @@ Check the status of the Apache service:\
 \
 sudo systemctl status apache2
 
-> ![](photos/media/image9.png){width="6.1930555555555555in"
-> height="2.158333333333333in"}
+> ![](photos/media/image9.png)
 
 2.  **Understanding Daemons**
 
@@ -159,16 +148,13 @@ List all running processes:\
 \
 ps aux
 
--   ![](photos/media/image10.png){width="5.897222222222222in"
-    > height="3.1527777777777777in"}
+-   ![](photos/media/image10.png)
 
 Use top to view processes in real-time:\
 \
 top
 
--   ![](photos/media/image11.png){width="5.897222222222222in"
-    > height="3.1527777777777777in"}
-
+-   ![](photos/media/image11.png)
 2.  **Managing Processes**
 
 Identify a process to kill using ps or top, then kill it:\
@@ -374,8 +360,7 @@ Update index.html to include the image:\
 
 \</body\>
 
--   ![](photos/media/image12.png){width="5.897222222222222in"
-    > height="2.061111111111111in"}
+-   ![](photos/media/image12.png)
 
 #### **Part 3: Configuring Apache2 to Serve the Website (10 minutes)**
 
@@ -401,8 +386,7 @@ Add the following content:\
 
 \</VirtualHost\>
 
--   ![](photos/media/image13.png){width="5.897222222222222in"
-    > height="1.1055555555555556in"}
+-   ![](photos/media/image13.png)
 
 -   Save and exit (Ctrl+O, Enter, Ctrl+X).
 

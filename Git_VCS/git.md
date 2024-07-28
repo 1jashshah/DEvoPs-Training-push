@@ -9,8 +9,7 @@ git config \--global user.name \"Your Name\"
 
 git config \--global user.email \"your.email@example.com\"
 
-![](photos/media/image1.png){width="3.8125in"
-height="2.4791666666666665in"}
+![](photos/media/image1.png)
 
 1.  **Create a GitHub Repository**:
 
@@ -20,8 +19,7 @@ Clone the repository to your local machine:\
 \
 git clone https://github.com/your-username/website-project.git
 
-![](photos/media/image2.png){width="6.6930555555555555in"
-height="2.0597222222222222in"}
+![](photos/media/image2.png)
 
 1.  **Initialize the Project**:
 
@@ -51,11 +49,9 @@ git commit -m \"Initial commit: Added project structure and index.html\"
 
 git push origin main
 
-![](photos/media/image3.png){width="6.6930555555555555in"
-height="3.8180555555555555in"}
+![](photos/media/image3.png)
 
-![](photos/media/image4.png){width="6.6930555555555555in"
-height="3.8180555555555555in"}
+![](photos/media/image4.png)
 
 #### **Exercise 1: Branching and Adding Features (20 minutes)**
 
@@ -75,8 +71,7 @@ tree files.
 -   feature/add-blog-post: This is the name of the new branch being
     > created.
 
-![](photos/media/image5.png){width="6.6930555555555555in"
-height="0.6541666666666667in"}
+![](photos/media/image5.png)
 
 1.  **Add a Blog Post Page**:
 
@@ -88,8 +83,7 @@ echo \"\<!DOCTYPE html\>\<html\>\<head\>\<title\>Blog
 Post\</title\>\</head\>\<body\>\<h1\>My First Blog
 Post\</h1\>\</body\>\</html\>\" \> src/blog.html
 
--   ![](photos/media/image6.png){width="5.897222222222222in"
-    > height="3.234027777777778in"}
+-   ![](photos/media/image6.png)
 
 Commit and push changes:\
 \
@@ -99,9 +93,7 @@ git commit -m \"Added blog post page\"
 
 git push origin feature/add-blog-post
 
-![](photos/media/image7.png){width="6.6930555555555555in"
-height="2.9618055555555554in"}
-
+![](photos/media/image7.png){
 #### **Exercise 2: Collaborating with Merging and Handling Merge Conflicts (25 minutes)**
 
 **Create Another Branch for Author Info**:\
@@ -124,11 +116,8 @@ git commit -m \"Added author info to blog post\"
 
 git push origin feature/add-author-info
 
-![](photos/media/image8.png){width="6.6930555555555555in"
-height="2.8090277777777777in"}
-
-![](photos/media/image9.png){width="6.6930555555555555in"
-height="3.6708333333333334in"}
+![](photos/media/image8.png)
+![](photos/media/image9.png)
 
 **Create a Merge Conflict**:
 
@@ -144,11 +133,8 @@ git commit -m \"Added publish date to blog post\"
 
 git push origin feature/add-blog-post
 
-![](photos/media/image10.png){width="6.6930555555555555in"
-height="3.654166666666667in"}
-
-![](photos/media/image11.png){width="6.6930555555555555in"
-height="2.8090277777777777in"}
+![](photos/media/image10.png)
+![](photos/media/image11.png)
 
 **Merge and Resolve Conflict**:
 
@@ -158,8 +144,7 @@ git checkout main
 
 git merge feature/add-blog-post
 
--   ![](photos/media/image12.png){width="5.897222222222222in"
-    > height="3.7402777777777776in"}
+-   ![](photos/media/image12.png)
 
 Resolve the conflict in src/blog.html, then:\
 \
@@ -169,8 +154,7 @@ git commit -m \"Resolved merge conflict in blog post\"
 
 git push origin main
 
-![](photos/media/image13.png){width="6.6930555555555555in"
-height="5.548611111111111in"}
+![](photos/media/image13.png)
 
 #### **Exercise 3: Rebasing and Feature Enhancement (25 minutes)**
 
@@ -197,9 +181,7 @@ git commit -m \"Added comment section\"
 
 git push origin feature/add-author-info
 
-![](photos/media/image14.png){width="6.6930555555555555in"
-height="2.251388888888889in"}
-
+![](photos/media/image14.png)
 #### **Exercise 4: Pulling and Simulating Collaboration (20 minutes)**
 
 1.  **Pull Changes from Remote**:
@@ -223,9 +205,7 @@ Pull the changes made by the collaborator:\
 \
 git pull origin main
 
-![](photos/media/image15.png){width="6.6930555555555555in"
-height="3.826388888888889in"}
-
+![](photos/media/image15.png)
 #### **Exercise 5: Versioning and Rollback (30 minutes)**
 
 1.  **Tagging a Version**:
@@ -236,8 +216,7 @@ git tag -a v1.0 -m \"Version 1.0: Initial release\"
 
 git push origin v1.0
 
--   ![](photos/media/image16.png){width="5.897222222222222in"
-    > height="1.5027777777777778in"}
+-   ![](photos/media/image16.png)
 
 2.  **Make a Change that Needs Reversion**:
 
@@ -251,8 +230,7 @@ git commit -m \"Incorrect comment update\"
 
 git push origin main
 
--   ![](photos/media/image17.png){width="5.897222222222222in"
-    > height="2.502083333333333in"}
+-   ![](photos/media/image17.png)
 
 3.  **Revert to a Previous Version**:
 
@@ -262,17 +240,14 @@ git revert HEAD
 
 git push origin main
 
--   ![](photos/media/image18.png){width="5.897222222222222in"
-    > height="2.0458333333333334in"}
-
+-   ![](photos/media/image18.png)
 Alternatively, reset to a specific commit (use with caution):\
 \
 git reset \--hard v1.0
 
 git push -f origin main
 
-![](photos/media/image19.png){width="6.6930555555555555in"
-height="1.3472222222222223in"}
+![](photos/media/image19.png)
 
 #### **Extra Activities (25 minutes)**
 
@@ -290,17 +265,14 @@ Apply the stashed changes:\
 \
 git stash apply
 
-![](photos/media/image20.png){width="6.6930555555555555in"
-height="1.8958333333333333in"}
-
+![](photos/media/image20.png)
 2.  **Viewing Commit History**:
 
 Use git log to view commit history:\
 \
 git log --oneline
 
-![](photos/media/image21.png){width="6.6930555555555555in"
-height="0.9215277777777777in"}
+![](photos/media/image21.png)
 
 3.  **Cherry-Picking Commits**:
 
@@ -320,5 +292,4 @@ git checkout main
 
 git rebase -i HEAD\~3
 
-![](photos/media/image22.png){width="6.6930555555555555in"
-height="3.7625in"}
+![](photos/media/image22.png)

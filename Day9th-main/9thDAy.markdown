@@ -16,8 +16,7 @@ ingress, URL rewriting, sticky sessions, and autoscaling.
     -   Ensure Minikube is installed and running on the local Ubuntu
         > machine.
 
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image10.png){width="6.5in"
-> height="2.9305555555555554in"}
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image10.png)
 
 -   Verify the Kubernetes cluster is functioning correctly
 
@@ -30,8 +29,7 @@ ingress, URL rewriting, sticky sessions, and autoscaling.
 
     -   Build a Docker image for the static web application.
 
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image9.png){width="6.5in"
-> height="5.444444444444445in"}
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image9.png)
 
 -   Push the Docker image to Docker Hub or a local registry.
 
@@ -40,23 +38,18 @@ ingress, URL rewriting, sticky sessions, and autoscaling.
     -   Write a Kubernetes deployment manifest to deploy the static web
         > application.
 
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image6.png){width="4.953125546806649in"
-> height="3.0520833333333335in"}
-
--   ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image7.png){width="4.8888713910761155in"
-    > height="3.1652307524059493in"}
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image6.png)
+-   ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image7.png)
 
 -   Write a Kubernetes service manifest to expose the static web
     > application within the cluster.
 
--   ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image2.png){width="6.5in"
-    > height="2.9583333333333335in"}
+-   ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image2.png)
 
 -   Apply the deployment and service manifests to the Kubernetes
     > cluster.
 
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image1.png){width="6.5in"
-> height="0.25in"}
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image1.png)
 
 **Deliverables:**
 
@@ -80,9 +73,7 @@ ingress, URL rewriting, sticky sessions, and autoscaling.
     -   Write an ingress resource manifest to route external traffic to
         > the static web application.
 
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image5.png){width="6.5in"
-> height="5.944444444444445in"}
-
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image5.png)
 -   Configure advanced ingress rules for path-based routing and
     > host-based routing (use at least two different hostnames and
     > paths).
@@ -92,8 +83,7 @@ ingress, URL rewriting, sticky sessions, and autoscaling.
 -   Configure URL rewriting in the ingress resource to modify incoming
     > URLs before they reach the backend services.
 
--   ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image4.png){width="6.5in"
-    > height="2.2777777777777777in"}
+-   ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image4.png)
 
 -   Enable sticky sessions to ensure that requests from the same client
     > are directed to the same backend pod.
@@ -115,11 +105,9 @@ ingress, URL rewriting, sticky sessions, and autoscaling.
 
     -   Set thresholds for minimum and maximum pod replicas.
 
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image8.png){width="6.5in"
-> height="2.2777777777777777in"}
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image8.png)
 >
-> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image3.png){width="6.5in"
-> height="2.2777777777777777in"}
+> ![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image3.png)
 
 7.  **Stress Testing:**
 
@@ -150,12 +138,9 @@ kubectl run -i \--tty \--rm load-generator \--image=busybox
 
 while true; do wget -q -O- https://minikube.ip/live; done
 
-![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image11.png){width="6.5in"
-height="2.0555555555555554in"}
+![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image11.png)
 
-![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image12.png){width="6.5in"
-height="4.152777777777778in"}
-
+![](vertopal_d4521abee07541fc9c056f0111899a4f/media/image12.png)
 ### **Stage 4: Final Validation and Cleanup**
 
 8.  **Final Validation:**

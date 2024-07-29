@@ -1,4 +1,4 @@
-### ![](photos/media/image14.jpg){width="1.148545494313211in" height="0.6336811023622048in"}
+### ![](photos/media/image14.jpg)
 
 ### **Comprehensive Linux Operations**
 
@@ -24,8 +24,7 @@ Create a file server_config.txt using Nano :\
 \
 nano server_config.txt
 
--   ![](photos/media/image12.png){width="4.703125546806649in"
-    > height="2.328951224846894in"}
+-   ![](photos/media/image12.png)
 
 Add the following content:\
 \
@@ -99,9 +98,7 @@ sudo userdel developer
 \
 sudo groupadd devteam
 
-![](photos/media/image13.png){width="6.5in"
-height="0.5972222222222222in"}
-
+![](photos/media/image13.png)
 **Add the user developer to the devteam group:**\
 \
 sudo usermod -aG devteam developer
@@ -126,8 +123,7 @@ Sudo usermod +L dev
 
 Sudo usermod +U dev
 
-![](photos/media/image1.png){width="6.5in"
-height="0.5972222222222222in"}
+![](photos/media/image1.png)
 
 **Remove the user developer from the devteam group:**\
 \
@@ -147,8 +143,7 @@ View permissions for server_config.txt:\
 \
 ls -l server_config.txt
 
-![](photos/media/image9.png){width="6.5in"
-height="0.5972222222222222in"}
+![](photos/media/image9.png)
 
 -   Discuss the output (e.g., -rw-r\--r\--).
 
@@ -161,8 +156,7 @@ others:\
 \
 chmod 644 server_config.txt
 
-![](photos/media/image2.png){width="6.5in"
-height="0.6388888888888888in"}
+![](photos/media/image2.png)
 
 ### **Understanding File Permissions**
 
@@ -283,15 +277,12 @@ List all running processes:\
 \
 ps aux
 
-![](photos/media/image7.png){width="6.5in"
-height="1.2222222222222223in"}
-
+![](photos/media/image7.png)
 Use top to view processes in real-time:\
 \
 top
 
-![](photos/media/image11.png){width="4.067708880139983in"
-height="3.5396883202099736in"}
+![](photos/media/image11.png)
 
 2.  **Managing Processes**
 
@@ -342,8 +333,7 @@ Change the priority of the process using renice:\
 \
 renice +10 \<PID\>
 
-![](photos/media/image5.png){width="6.5in"
-height="0.3611111111111111in"}
+![](photos/media/image5.png)
 
 ### **Filesystem Hierarchy Standard (FHS):**
 

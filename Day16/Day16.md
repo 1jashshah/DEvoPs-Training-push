@@ -1,5 +1,4 @@
-![](photos/media/image1.png){width="2.90625in"
-height="1.8854166666666667in"}
+![](photos/media/image1.png)
 
 **Problem Statement:** You are tasked with deploying Ansible in a
 multi-node environment consisting of multiple Linux servers. The goal is

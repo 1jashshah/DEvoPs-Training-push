@@ -1,53 +1,170 @@
-Day 14: In this task, I have done a set up of a CI/CD pipeline using Jenkins to streamline the deployment process of a simple Java application.
-First of all, I created a simple application in Java as App.java which is given below:
+#### **Problem Statement:**
 
-package com.example;
+You are tasked with setting up a CI/CD pipeline using Jenkins to
+streamline the deployment process of a simple Java application. The
+pipeline should accomplish the following tasks:
 
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
+1.  **Fetch the Dockerfile**: The pipeline should clone a GitHub
+    > repository containing the source code of the Java application and
+    > a Dockerfile.
 
-![alt text](image-1.png)
-javac App.java
-java App.java
-![alt text](image-2.png)
-Secondly, I created a Dockerfile which which will create an image for this app.
+2.  **Create a Docker Image**: The pipeline should build a Docker image
+    > from the fetched Dockerfile.
 
-FROM openjdk:11-slim
-WORKDIR /app
-COPY . /app
-RUN javac App.java
-CMD ["java", "App"]
+3.  **Push the Docker Image**: The pipeline should push the created
+    > Docker image to a specified DockerHub repository.
 
-Next, I created a Jenkinsfile which uses my GitHub repo to build the image from the Dockerfile, will push that docker image to my docker repository and make a comtainer out of that image.
+4.  **Deploy the Container**: The pipeline should deploy a container
+    > using the pushed Docker image.
 
-pipeline {
-    agent any
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git url:'https://github.com/1jashshah/Jenkins-java-docker-DAY14th-.git', branch: 'main'
-            }
-        }
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t 1jashshah/day14th'
-            }
-        }
-        stage('Push Docker Image') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerid')]) {
-                    sh 'docker login'
-                    sh 'docker push 1jashshah/day14th'
-                }
-            }
-        }
-        stage('Deploy Container') {
-            steps {
-                sh 'docker run -d -p 8089:8080 1jashshah/day14th'
-            }
-        }
-    }
-}
+#### **Deliverables:**
+
+1.  **GitHub Repository**: A GitHub repository containing:
+
+    -   The source code of a simple Java application.
+
+    -   A Dockerfile for building the Docker image.
+
+> ![](photos/media/image2.png)
+
+2.  **Jenkins Pipeline Script**: A Jenkinsfile (pipeline script) that:
+
+    -   Clones the GitHub repository.
+
+    -   Builds the Docker image.
+
+    -   Pushes the Docker image to DockerHub.
+
+    -   Deploys a container using the pushed image.
+
+> pipeline {
+>
+> agent any
+>
+> environment {
+>
+> registry = \'docker.io\'
+>
+> registryCredential = \'dockerid\'
+>
+> }
+>
+> stages {
+>
+> stage (\'Checkout\') {
+>
+> steps {
+>
+> git url:
+> \'https://github.com/1jashshah/Jenkins-java-docker-DAY14th-.git\',
+> credentialsId: \'gitid\', branch: \'main\'
+>
+> }
+>
+> }
+>
+> stage (\'Docker Build\') {
+>
+> steps {
+>
+> script {
+>
+> docker.withRegistry(\'\', registryCredential){
+>
+> def customImage =
+> docker.build(\"1jashshah/myjava-app:\${env.BUILD_ID}\")
+>
+> customImage.push()
+>
+> }
+>
+> }
+>
+> }
+>
+> }
+>
+> stage(\'Deploy Container\') {
+>
+> steps {
+>
+> script {
+>
+> docker.withRegistry(\'\', registryCredential) {
+>
+> def runContainer =
+> docker.image(\"1jashshah/myjava-app:\${env.BUILD_ID}\").run(\'\--name
+> mynew-container -d\')
+>
+> echo \"Container ID: \${runContainer.id}\"
+>
+> }
+>
+> }
+>
+> }
+>
+> }
+>
+> stage(\'Output\') {
+>
+> steps{
+>
+> script{
+>
+> sh \'javac App.java\'
+>
+> sh \'java App.java\'
+>
+> }
+>
+> }
+>
+> }
+>
+> }
+>
+> post {
+>
+> always {
+>
+> echo \'Pipeline Finished\'
+>
+> }
+>
+> success {
+>
+> echo \'Status : Successfull\'
+>
+> }
+>
+> failure {
+>
+> echo \'Status : Failed\'
+>
+> }
+>
+> }
+>
+> }
+
+3.  **DockerHub Repository**: A DockerHub repository where the Docker
+    > images will be stored.
+
+4.  **Jenkins Setup**:
+
+    -   Jenkins installed and configured on a local Ubuntu machine.
+
+    -   Required plugins installed (e.g., Git, Docker, Pipeline).
+
+    -   ![](photos/media/image1.png)
+
+    -   ![](photos/media/image3.png)
+
+5.  **Documentation**: Detailed documentation explaining:
+
+    -   How to set up the local Jenkins environment.
+
+    -   Configuration steps for the pipeline.
+
+    -   Instructions for verifying the deployment.

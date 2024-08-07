@@ -1,0 +1,4 @@
+dependencies:
+  - role: mysql
+    vars:
+      mysql_root_password: "root_password"
